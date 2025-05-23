@@ -7,8 +7,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // Nonaktifkan optimasi gambar agar kompatibel dengan statis
   },
+  output: 'export',
 }
 
 export default nextConfig
