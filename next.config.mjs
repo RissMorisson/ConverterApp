@@ -7,9 +7,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true, // Nonaktifkan optimasi gambar agar kompatibel dengan statis
+    unoptimized: true,
   },
   output: 'export',
+  basePath: '/ConverterApp', // Sesuaikan dengan nama repository
+  assetPrefix: '/ConverterApp/', // Sesuaikan dengan nama repository
 }
 
 export default nextConfig
