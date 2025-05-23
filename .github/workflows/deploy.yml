@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Beri izin untuk menulis ke repository
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -19,6 +21,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Check output directory
+        run: ls -la out  # Debugging: cek apakah folder out ada
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
